@@ -1,0 +1,35 @@
+<section class="section">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Business</th>
+                <th>Address</th>
+                <th>Category</th>
+            </tr>
+        </thead>
+        ${businessesList.map(business => `
+            <tr>
+                <td>${business.business}</td> 
+                <td>${business.address}</td>
+                <td>${business.category}</td>
+            </tr>
+        `).join('')}  
+        <!-- the join does not seem necessary for this file -->
+    </table>
+</section>
+<section class="section">
+    <p>Add a new business</p>
+    <form action="/businesses" method="POST">
+        <label>Business
+            <input type="text" name="business"/>
+        </label>
+        <label>Address
+            <input type="text" name="address"/>
+        </label>
+        <label>Category
+            <input type="text" name="category"/>
+        </label>
+        <button type="submit" class='is-primary'>Submit</button>
+    </form>
+</section>
+
