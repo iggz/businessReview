@@ -17,6 +17,12 @@ class Businesses {
             return err.message;
         }
     }
+
+    // static async getById() {
+    //     try {
+    //         const response = await db.
+    //     }
+    // }
     
     static async add(business, address, category) {
         const query = `INSERT INTO business (business, address, category) VALUES ('${business}', '${address}', '${category}') `;

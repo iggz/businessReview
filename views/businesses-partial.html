@@ -7,9 +7,9 @@
                 <th>Category</th>
             </tr>
         </thead>
-        ${businessesList.map(business => `
+        ${allBusinesses.map(business => `
             <tr>
-                <td>${business.business}</td> 
+                <td><a href=https://google.com/search?q=${business}> ${business.business}</a></td> 
                 <td>${business.address}</td>
                 <td>${business.category}</td>
             </tr>
